@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cimdi : MonoBehaviour {
+public class Cimdi : MonoBehaviour {
 
 	public GameObject CimduBilde;
 
-public void OnToggleClick()
+
+public void OnToggleClickCimdi()
 {
     CimduBilde.SetActive(!CimduBilde.activeSelf);
 }
+
 }

@@ -12,8 +12,15 @@ public class AinuParsledzejs : MonoBehaviour {
 	public void CilvekaIzvele(){
 		SceneManager.LoadScene (1, LoadSceneMode.Single);
 	}
-	public void UzDrebem(){
-		SceneManager.LoadScene (2, LoadSceneMode.Single);
+	public void UzViritiesDrebem(){
+		
+			SceneManager.LoadScene (2, LoadSceneMode.Single);
+
+	}
+	public void UzSievietesDrebem(){
+		if (cilvekaIzvelesanas.izveletaisCilveks == "Female") {
+			SceneManager.LoadScene (3, LoadSceneMode.Single);
+		}
 	}
 	//Metode , kura aizver programmu, ja tā ir izveidota kā .exe
 	public void Apturet(){
