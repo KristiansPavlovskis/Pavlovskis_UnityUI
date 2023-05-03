@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 //Importē, lai lietotu pointer darbību interfeisu
 using UnityEngine.EventSystems;
 
@@ -29,5 +28,17 @@ public class DrebjuParvietosana : MonoBehaviour,IPointerDownHandler, IBeginDragH
 	public void OnEndDrag(PointerEventData notikums){
 		Debug.Log ("Pabeigta objekta vilkšana!");
 	}
+
+	private void Collision2D(Collider2D collision2D){
+		if (collision2D.gameObject.tag == "cilveks") {
+			Debug.Log ("Notiek saskaršanās");
+		}
+	}
+
+
+
+
+
+
 
 }
