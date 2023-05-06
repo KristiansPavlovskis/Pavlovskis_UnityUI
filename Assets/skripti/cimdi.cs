@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cimdi : MonoBehaviour {
+public class cimdi : MonoBehaviour {
 
 	public GameObject CimduBilde;
 
