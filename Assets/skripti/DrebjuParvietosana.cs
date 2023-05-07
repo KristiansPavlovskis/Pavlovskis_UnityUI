@@ -22,32 +22,38 @@ public class DrebjuParvietosana : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
     public void OnPointerDown(PointerEventData notikums)
     {
-        Debug.Log("Mouse click on object!");
+        Debug.Log("Uzspiests uz objekta!");
     }
 
     public void OnBeginDrag(PointerEventData notikums)
     {
-        Debug.Log("Drag started!");
+        Debug.Log("Drag sākums!");
         // Make the clothing item a child of the canvas
         transform.SetParent(kanva.transform);
     }
 
     public void OnDrag(PointerEventData notikums)
     {
-        Debug.Log("Object is being moved!");
+        Debug.Log("Objekts tiek kustināts!");
         transformKomponente.anchoredPosition += notikums.delta / kanva.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData notikums)
+{
+    Debug.Log("Drag Pabeigts!");
+
+    if (!EventSystem.current.IsPointerOverGameObject())
     {
-        Debug.Log("Drag finished!");
         if (characterSpawn)
         {
-            // Make the clothing item a child of the character spawn point
-            transform.SetParent(characterSpawn);
-        }else{
             
+            transform.SetParent(characterSpawn);
+        }
+        else
+        {
             transform.SetParent(cimdiDrebes.transform);
         }
     }
+}
+
 }

@@ -9,6 +9,7 @@ public class cilvekaIzvelesanas : MonoBehaviour
 
     void Start()
     {
+        izveletaisCilveks = "Male";
         // Add a listener to the dropdown so we can handle when an option is selected
         cilveki.onValueChanged.AddListener(delegate {
             DropdownValueChanged(cilveki);
@@ -19,6 +20,6 @@ public class cilvekaIzvelesanas : MonoBehaviour
     {
         // Get the currently selected option from the dropdown
         izveletaisCilveks = cilveki.options[cilveki.value].text;
-		Debug.Log("Selected character: " + izveletaisCilveks);
+		Debug.Log("Izvēlētais cilvēks: " + izveletaisCilveks);
     }
 }

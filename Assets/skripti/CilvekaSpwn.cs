@@ -10,6 +10,8 @@ public class CilvekaSpwn : MonoBehaviour
     // Collider = get
     float minX, maxX;
 
+   
+
     void Start()
     {
         characterSpawn = GetComponent<Transform>();
@@ -34,7 +36,7 @@ public class CilvekaSpwn : MonoBehaviour
 
 
         GameObject character = Instantiate(characterPrefab, position, Quaternion.identity, characterSpawn);
-        var bCol = character.AddComponent<BoxCollider>();
+       // var bCol = character.AddComponent<BoxCollider>();
         character.gameObject.tag = "cilveks";
         character.transform.localScale = new Vector3(scale, 0.05f, 0.05f);
     }
