@@ -29,7 +29,7 @@ public class DrebjuParvietosana : MonoBehaviour, IPointerDownHandler, IBeginDrag
     {
         Debug.Log("Drag sākums!");
         // Make the clothing item a child of the canvas
-        transform.SetParent(kanva.transform);
+       // transform.SetParent(kanva.transform);
     }
 
     public void OnDrag(PointerEventData notikums)
@@ -42,18 +42,19 @@ public class DrebjuParvietosana : MonoBehaviour, IPointerDownHandler, IBeginDrag
 {
     Debug.Log("Drag Pabeigts!");
 
-    if (!EventSystem.current.IsPointerOverGameObject())
-    {
-        if (characterSpawn)
+   // if (!EventSystem.current.IsPointerOverGameObject())
+    //{
+        if (!characterSpawn)
         {
             
-            transform.SetParent(characterSpawn);
+            transform.SetParent(cimdiDrebes.transform);
+          
         }
         else
         {
-            transform.SetParent(cimdiDrebes.transform);
+         transform.SetParent(characterSpawn);     
         }
-    }
+    //}
 }
 
 }
